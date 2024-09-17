@@ -27,7 +27,7 @@ const Index = () => {
     <div className={`min-h-screen bg-background text-foreground transition-colors duration-300 ${theme}`}>
       <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <header className="flex justify-between items-center mb-12">
-          <h1 className="text-4xl font-bold text-primary">Image OCR App</h1>
+          <h1 className="text-4xl font-bold text-primary">LuminaText</h1>
           <div className="flex items-center space-x-4">
             <ThemeToggle theme={theme} setTheme={setTheme} />
             {user && (

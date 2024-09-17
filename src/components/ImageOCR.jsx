@@ -64,7 +64,7 @@ const ImageOCR = () => {
 
   return (
     <Card className="p-6 max-w-2xl mx-auto bg-card text-card-foreground shadow-lg rounded-lg">
-      <h2 className="text-2xl font-bold mb-6 text-primary">Image OCR</h2>
+      <h2 className="text-2xl font-bold mb-6 text-primary">LuminaText OCR</h2>
       <div className="space-y-6">
         <div className="flex items-center justify-center w-full">
           <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-lg cursor-pointer bg-muted/50 hover:bg-muted/70 transition-colors">

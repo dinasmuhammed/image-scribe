@@ -30,7 +30,9 @@ const AuthForm = ({ onLogin }) => {
 
   return (
     <Card className="p-8 max-w-md mx-auto bg-card text-card-foreground shadow-lg rounded-lg">
-      <h2 className="text-3xl font-bold mb-6 text-primary text-center">{isLogin ? 'Welcome Back' : 'Create Account'}</h2>
+      <h2 className="text-3xl font-bold mb-6 text-primary text-center">
+        {isLogin ? 'Welcome to LuminaText' : 'Join LuminaText'}
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="relative">
           <Input
