@@ -51,23 +51,27 @@ const ImageOCR = () => {
   };
 
   return (
-    <Card className="p-6 max-w-2xl mx-auto">
+    <Card className="p-6 max-w-2xl mx-auto bg-card text-card-foreground">
       <h2 className="text-2xl font-bold mb-4">Image OCR</h2>
       <div className="space-y-4">
-        <Input type="file" accept="image/*" onChange={handleImageUpload} className="mb-2" />
+        <Input type="file" accept="image/*" onChange={handleImageUpload} className="mb-2 bg-input text-input-foreground" />
         {image && (
           <div className="mt-4">
-            <img src={image} alt="Uploaded" className="max-w-full h-auto mb-4" />
-            <Button onClick={extractText} disabled={isLoading} className="mr-2">
+            <img src={image} alt="Uploaded" className="max-w-full h-auto mb-4 rounded-lg shadow-md" />
+            <Button onClick={extractText} disabled={isLoading} className="mr-2 bg-primary text-primary-foreground hover:bg-primary/90">
               {isLoading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Processing</> : <><Upload className="mr-2 h-4 w-4" /> Extract Text</>}
             </Button>
-            <Button onClick={clearAll} variant="outline"><Trash2 className="mr-2 h-4 w-4" /> Clear All</Button>
+            <Button onClick={clearAll} variant="outline" className="bg-secondary text-secondary-foreground hover:bg-secondary/80">
+              <Trash2 className="mr-2 h-4 w-4" /> Clear All
+            </Button>
           </div>
         )}
         {text && (
           <div className="mt-4">
-            <Textarea value={text} readOnly className="w-full h-32 mb-2" />
-            <Button onClick={copyToClipboard}><Copy className="mr-2 h-4 w-4" /> Copy to Clipboard</Button>
+            <Textarea value={text} readOnly className="w-full h-32 mb-2 bg-muted text-muted-foreground" />
+            <Button onClick={copyToClipboard} className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Copy className="mr-2 h-4 w-4" /> Copy to Clipboard
+            </Button>
           </div>
         )}
       </div>
