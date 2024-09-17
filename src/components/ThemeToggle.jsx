@@ -10,6 +10,7 @@ const ThemeToggle = ({ theme, setTheme }) => {
         size="icon"
         onClick={() => setTheme('light')}
         title="Light Mode"
+        className="transition-colors"
       >
         <Sun className="h-[1.2rem] w-[1.2rem]" />
       </Button>
@@ -18,14 +19,16 @@ const ThemeToggle = ({ theme, setTheme }) => {
         size="icon"
         onClick={() => setTheme('dark')}
         title="Dark Mode"
+        className="transition-colors"
       >
         <Moon className="h-[1.2rem] w-[1.2rem]" />
       </Button>
       <Button
-        variant={theme === 'system' ? 'default' : 'outline'}
+        variant={theme === 'vibrant' ? 'default' : 'outline'}
         size="icon"
-        onClick={() => setTheme('system')}
-        title="System Theme"
+        onClick={() => setTheme('vibrant')}
+        title="Vibrant Mode"
+        className="transition-colors"
       >
         <Monitor className="h-[1.2rem] w-[1.2rem]" />
       </Button>
